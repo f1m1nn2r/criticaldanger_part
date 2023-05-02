@@ -1,0 +1,60 @@
+
+
+body{margin:0; padding:0;}
+*{margin:0; padding:0; box-sizing:border-box;}
+
+@mixin conSize($wt:null, $hh:null, $lh:null){width:$wt; height:$hh; line-height:$lh;}
+@mixin dis-flex($ai:null, $jc:null, $ff:null, $gap:null){display:flex; align-items:$ai; justify-content:$jc; flex-flow:$ff; gap:$gap;}
+@mixin font($fz:null, $fw:null, $co:null){font-size:$fz; font-weight:$fw; color:$co;}
+
+.container_wide{position:relative; background:#3a1b1b;
+    .expand-section{@include conSize(null, 180vw, null); position:relative; z-index:7; overflow:hidden;
+        .img-wrap{@include conSize(100%, 100%, null); position:absolute; top:0; z-index:-1; transform-style:preserve-3d; will-change:transform; background-image:url('https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63a090cc5189956e035ef49a_sam-mN-_5ZQAt3M-unsplash%20(1).jpg'); background-size:cover;}
+        .txt-wrap{
+            .txt-div{   
+                h1{line-height:0.9; font-size:14em; font-weight:400; color:#e4032e;}
+                &:nth-child(2){
+                    h1{padding-right:10vw; text-align:right;}
+                }
+                &:nth-child(3){
+                    h1{text-align:right;}
+                }
+                &:last-child{@include dis-flex(center, space-between, null, null);}
+            }
+        }
+    }
+    .scroll-section{@include conSize(224vw, 100%, null);
+        .back-text{@include conSize(100%, null, null); position:sticky; top:0; transform-style:preserve-3d;
+            h1{@include conSize(null, 100%, null); @include dis-flex(center, null, null, null); white-space:nowrap; @include font(50vw, null, #e4032e);}
+        }
+        .card-box{@include conSize(100%, 100%, null); @include dis-flex(flex-end, null, null, null); position:relative; z-index:99; transform-style:preserve-3d;
+            .card{@include conSize(24.22vw, 38.752vw, null);
+                &_01{background:url(./img/63af06f00e332ad974a03c1a_rhinos-card.png);}
+                &_02{background:url(./img/63af00653ca698368600b01f_leopard-card.png);}
+                &_03{background:url(./img/63b2d0999c26952473e5a496_gorilla-card.png);}
+                &_04{background:url(./img/63b2d098085eb05340a8fb1d_orangutan-card.png);}
+            }
+        }
+    }
+}
+.container_wide.__2{ padding:30vw 0 10vw; background:#000;
+    .light-section{@include conSize(137vw, 80vw, null); display:-webkit-box;
+        .lightImg{@include conSize(null, 41vw, null); overflow:hidden; border-radius:30px; margin-right:15vw; opacity:0.2;
+            img{@include conSize(100%, 100%, null); object-fit:cover;}
+        }
+    }
+    .circle-section{@include conSize(null, 100vh, null); position:relative;
+        .circle{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); background:rgb(32, 32, 201); border-radius:50%;
+            span{ }
+        }
+    }
+    .text-section{
+        .txt-div{
+            h1{line-height:0.9; white-space:nowrap; @include font(14em, 400, #fff);}
+            &:nth-child(even){
+                h1{text-align:right;}
+            }
+        }
+    }
+}
+

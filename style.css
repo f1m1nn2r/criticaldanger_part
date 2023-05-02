@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container_wide {
+  position: relative;
+  background: #3a1b1b;
+}
+.container_wide .expand-section {
+  height: 180vw;
+  position: relative;
+  z-index: 7;
+  overflow: hidden;
+}
+.container_wide .expand-section .img-wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  will-change: transform;
+  background-image: url("https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63a090cc5189956e035ef49a_sam-mN-_5ZQAt3M-unsplash%20(1).jpg");
+  background-size: cover;
+}
+.container_wide .expand-section .txt-wrap .txt-div h1 {
+  line-height: 0.9;
+  font-size: 14em;
+  font-weight: 400;
+  color: #e4032e;
+}
+.container_wide .expand-section .txt-wrap .txt-div:nth-child(2) h1 {
+  padding-right: 10vw;
+  text-align: right;
+}
+.container_wide .expand-section .txt-wrap .txt-div:nth-child(3) h1 {
+  text-align: right;
+}
+.container_wide .expand-section .txt-wrap .txt-div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.container_wide .scroll-section {
+  width: 224vw;
+  height: 100%;
+}
+.container_wide .scroll-section .back-text {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.container_wide .scroll-section .back-text h1 {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+  font-size: 50vw;
+  color: #e4032e;
+}
+.container_wide .scroll-section .card-box {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+  z-index: 99;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.container_wide .scroll-section .card-box .card {
+  width: 24.22vw;
+  height: 38.752vw;
+}
+.container_wide .scroll-section .card-box .card_01 {
+  background: url(./img/63af06f00e332ad974a03c1a_rhinos-card.png);
+}
+.container_wide .scroll-section .card-box .card_02 {
+  background: url(./img/63af00653ca698368600b01f_leopard-card.png);
+}
+.container_wide .scroll-section .card-box .card_03 {
+  background: url(./img/63b2d0999c26952473e5a496_gorilla-card.png);
+}
+.container_wide .scroll-section .card-box .card_04 {
+  background: url(./img/63b2d098085eb05340a8fb1d_orangutan-card.png);
+}
+
+.container_wide.__2 {
+  padding: 30vw 0 10vw;
+  background: #000;
+}
+.container_wide.__2 .light-section {
+  width: 137vw;
+  height: 80vw;
+  display: -webkit-box;
+}
+.container_wide.__2 .light-section .lightImg {
+  height: 41vw;
+  overflow: hidden;
+  border-radius: 30px;
+  margin-right: 15vw;
+  opacity: 0.2;
+}
+.container_wide.__2 .light-section .lightImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container_wide.__2 .circle-section {
+  height: 100vh;
+  position: relative;
+}
+.container_wide.__2 .circle-section .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: rgb(32, 32, 201);
+  border-radius: 50%;
+}
+.container_wide.__2 .text-section .txt-div h1 {
+  line-height: 0.9;
+  white-space: nowrap;
+  font-size: 14em;
+  font-weight: 400;
+  color: #fff;
+}
+.container_wide.__2 .text-section .txt-div:nth-child(even) h1 {
+  text-align: right;
+}
