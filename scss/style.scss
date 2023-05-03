@@ -1,11 +1,10 @@
 
 
+
+
+/*
 body{margin:0; padding:0;}
 *{margin:0; padding:0; box-sizing:border-box;}
-
-@mixin conSize($wt:null, $hh:null, $lh:null){width:$wt; height:$hh; line-height:$lh;}
-@mixin dis-flex($ai:null, $jc:null, $ff:null, $gap:null){display:flex; align-items:$ai; justify-content:$jc; flex-flow:$ff; gap:$gap;}
-@mixin font($fz:null, $fw:null, $co:null){font-size:$fz; font-weight:$fw; color:$co;}
 
 .container_wide{position:relative; background:#3a1b1b;
     .expand-section{@include conSize(null, 180vw, null); position:relative; z-index:7; overflow:hidden;
@@ -57,4 +56,238 @@ body{margin:0; padding:0;}
         }
     }
 }
+*/
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+$noto:'Noto Sans KR', sans-serif;
+$serif:'Noto Serif KR', serif;
+$nanum:'Nanum Myeongjo', serif;
+$mon:'Montserrat', sans-serif;
+$red:#e4032e;
+$redBrown:#3a1b1b;
+
+@mixin conSize($wt:null, $hh:null, $lh:null){width:$wt; height:$hh; line-height:$lh;}
+@mixin dis-flex($ai:null, $jc:null, $ff:null, $gap:null){display:flex; align-items:$ai; justify-content:$jc; flex-flow:$ff; gap:$gap;}
+@mixin font($fz:null, $fw:null, $ff:null, $co:null){font-size:$fz; font-weight:$fw; font-family:$ff; color:$co;}
+@mixin s_txt(){@include font(0.7vw, 500, $mon, $red);}
+@mixin b_txt(){line-height:0.9; @include font(10vw, 400, $mon, null);}
+@mixin pt_abs($top:null, $right:null, $bottom:null, $left:null, $zd:null){position:absolute; top:$top; right:$right; bottom:$bottom; left:$left; z-index:$zd;}
+
+body{@include font(null, null, $noto, null); background:$redBrown; color:$red;}
+*{margin:0; padding:0; box-sizing:border-box;}
+ul, li{list-style:none;}
+a{color:#000; text-decoration:none;}
+
+header{padding:11px 0 0 0;
+    .header-inner{@include dis-flex(center, space-between, null, null);
+        a{@include s_txt;}
+        .menu_ul{@include dis-flex(center, null, null, 20px);}
+    }
+}
+
+
+/*** 섹션01 시작 ***/
+.section01{
+    &-inner{position:relative; padding:0 20px 20px 20px;
+        .intro-txt-box{
+            .top-txt{@include dis-flex(center, space-between, null, null);
+                h1{line-height:1; @include font(12vw, 400, null, $red);
+                    &.blur{filter:blur(6px);}
+                }
+            }
+            .bot-txt{@extend .top-txt;}
+            &.bottom-fix{position:sticky; bottom:0;}
+        } 
+        .contens-box{@include dis-flex(null, null, null, null);
+            .left{@include conSize(56.3vw, 78.6vw, null); background:url('https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63b8c762fe573c241e4514de_orangutan-image.jpg') center no-repeat; background-size:cover;}
+            .right{@include dis-flex(null, space-between, column, null); padding:4vw 10vw 22vw 10.5vw;
+                .txt-box{
+                    h1{@include s_txt();
+                        &.between{@include dis-flex(center, space-between, null, null);}
+                    }
+                }
+                .top-con{@include conSize(12.5vmax, null, null); position:relative;
+                    .txt-box{padding:0 0 20px 0;}
+                    .video-box{@include conSize(null, 16vmax, null); position:relative;
+                        video{@include conSize(100%, 100%, null); object-fit:cover;}
+                        .sc01_cursor{@include conSize(9.96vw, 9.96vw, null); @include dis-flex(center, center, null, null); @include pt_abs(50%, -41%, null, null, 5); transform:translateY(-50%); backdrop-filter:blur(10px); border-radius:50%; 
+                            p{@include s_txt();}
+                            &::after{content:""; @include conSize(100%, 100%, null); @include pt_abs(0, null, null, 0, -1); background:rgb(58 27 27 / 64%); border-radius:50%;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*** 섹션01 끝 ***/
+
+/*** 섹션02 시작 ***/
+.section02{position:relative; z-index:55;
+    &-inner{@include dis-flex(null, null, null, null); padding:10vw 1.5vw 10vw 1.5vw;
+        .left{@include conSize(49vw, null, null); @include dis-flex(flex-end, null, column, 6vw);
+            .fir{
+                h2{line-height:1.3; @include font(1.7vw, 400, $serif, null); letter-spacing:-2px;}
+            }
+            .sec{@include conSize(100%, null, null); @include dis-flex(null, null, null, 50px);
+                p{@include s_txt(); text-transform:uppercase;}
+            }
+            .thr{@include dis-flex(null, null, column, null); @include font(1vw, 500, null, null);
+                .list_arr{@include dis-flex(null, null, null, null);
+                    .year{@include conSize(140px, null, null);}
+                    div{@include dis-flex(null, null, null, null); text-transform:uppercase;
+                        p{@include conSize(450px, null, null);}
+                    }
+                }
+            }
+        }
+        .right{@include conSize(10.5vw, null, null); @include dis-flex(null, null, column, 3vw); margin:0 auto;
+            .img-box{@include conSize(10.5vw, 14vw, null); background:url('https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63b9b5269d28b572e64f1482_deforestation-image.webp') bottom no-repeat; background-size:cover;}
+            .rg_ul{
+                li{@include s_txt(); text-transform:uppercase;}
+            }
+        }
+    }
+    .overlay_bg{@include conSize(100%, 100%, null); @include pt_abs(0, null, null, 0, -1); opacity:.1; filter:brightness(0.5) blur(4px); background:url('https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63b9b5269d28b572e64f1482_deforestation-image.webp') top no-repeat; background-size:cover; box-shadow:inset 8vw 3vw 3vw 6vw rgb(58 27 27 / 50%);}
+}
+/*** 섹션02 끝 ***/
+
+/*** 섹션03 시작 ***/
+.section03{padding:0 0 13vw 0;
+    &-inner{@include dis-flex(null, null, column, 15vw);
+        .top-con{@include dis-flex(flex-end, space-between, null, null);
+            .left{@include dis-flex(null, null, column, 45px); @include s_txt();
+                div{@include dis-flex(null, null, column, null);
+                    a{position:relative; @include s_txt();
+                        &::after{content:""; @include conSize(100%, 1px, null); @include pt_abs(null, null, 2px, 0, null); background:$red;}
+                    }
+                }
+            }
+            .right{
+                h1{line-height:0.93; margin-bottom:-3vw; @include font(24vw, 700, $nanum, null);}
+            }
+        }
+        .bot-con{@include dis-flex(null, null, column, 1vw); text-align:center;
+            h2{@include font(1.5vw, 400, $nanum, null); letter-spacing:-1px;}
+            p{@include s_txt();}
+            a{position:relative; @include s_txt();
+                &::after{content:""; @include conSize(100%, 1px, null); @include pt_abs(null, null, 2px, 0, null); background:$red;}
+            }
+        }
+    }
+}
+/*** 섹션03 끝 ***/
+
+/*** 섹션04 시작 ***/
+.section04{@include conSize(null, 120vw, null); position:relative; z-index:55;
+    &-inner{
+        .txt-box{padding:1vw 2vw 1vw 2vw;
+            h1{@include b_txt();
+                &:nth-child(2){padding-left:25vw;}
+                &:nth-child(3){text-align:right;}
+                &:last-child{@include dis-flex(null, space-between, null, null);}
+            }
+        }
+    }
+    .tiger-bg{@include conSize(100%, 100%, null); @include pt_abs(0, null, null, 0, -1); background:url('https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63a090cc5189956e035ef49a_sam-mN-_5ZQAt3M-unsplash%20(1).jpg') center no-repeat; background-size:cover;}
+}
+/*** 섹션04 끝 ***/
+
+/*** 섹션05 시작 ***/
+.section05{padding:0 0 30vw 0;
+    &-inner{
+        .intro-txt-box{height:70vw; @include dis-flex(center, center, column, 2vw); padding:0 0 18vw 0;
+            h1{line-height:1.2; @include font(3.5vw, 300, $serif, null); letter-spacing:-2px; text-align:center}
+            span{@include s_txt();}
+        }
+        .contents-box{@include dis-flex(null, center, null, 5vw);
+            .left{@include conSize(23.77vw, null, null); @include dis-flex(null, null, column, 3vw);
+                .txt-box{
+                    h2{@include font(1vw, 400, $mon, null);
+                        &:first-child{text-align:right;}
+                    }
+                }
+                .img-box{@include conSize(100%, 40.8vw, null); background:url('https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63aee29ada54a2d8c32b2731_jungle2.jpg') center no-repeat; background-size:cover;}
+            }
+            .right{@include dis-flex(null, null, column, 23vw);
+                .img-box{@include conSize(14.55vw, 21.55vw, null); margin:0 auto; margin-right:7vw; background:url('https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63aee29ab337a64c92f8e8c5_jungle1.jpg') center no-repeat; background-size:cover;}
+                .txt-box{text-transform:uppercase;
+                    h2{line-height:1; @include font(3.5vw, 500, $mon, null);}
+                }
+            }
+        }
+    }
+}
+/*** 섹션05 끝 ***/
+
+/*** 섹션06 시작 ***/
+.section06{@include conSize(null, 50vw, null); position:relative;
+    .fix-txt{position:sticky; bottom:0; left:0; padding-left:10vw;
+        h1{line-height:0.85; white-space:nowrap; @include font(44vw, 300, $nanum, null); letter-spacing:-36px;}
+    }
+    &-inner{@include pt_abs(null, null, 0, 0, null);
+        .card-frame{@include dis-flex(flex-end, null, null, null);
+            .empty_div{@include conSize(100vw, 100vh, null);}
+            .card-container{display:-webkit-box; position:sticky; bottom:0;
+                .card-con-box{@include conSize(27.4vw, 43vw, null); @include dis-flex(flex-end, null, null, null);
+                    .card{@include conSize(84%, 85%, null); position:relative; z-index:5; backdrop-filter:blur(5px);
+                        @for $i from 1 to 6{
+                            &__#{$i}{background:url(./img/RL-scroll-#{$i}.png) center no-repeat; background-size:100%;}
+                        }
+                        &::after{content:""; @include conSize(100%, 100%, null); @include pt_abs(50%, null, null, 50%, -1); transform:translate(-50%,-50%); background:transparent; box-shadow:0px 0px 8px 3px rgba(0, 0, 0, 0.2); border-radius:35px;}
+                    }
+                }
+            }
+        }
+    }
+}
+/*** 섹션06 끝 ***/
+
+/*** 섹션07 시작 ***/
+.section07{position:relative; z-index:55; padding:47vw 0 0 0;
+    .graph-bg{@include conSize(100%, 100vh, null); @include pt_abs(null, null, 0, 0, -1);
+        .graph-line{@include conSize(100%, 100%, null); @include pt_abs(null, null, 0, 0, -1); background:url('https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63b82b3435544c7fd4c801b2_graph-line.svg') no-repeat; background-size:80%;}
+        .graph-line-opacity{opacity:.1;}
+        .graph-line-basic{z-index:1; mix-blend-mode:overlay;}
+        .graph-line-exposure{@include conSize(100%, 100%, null); @include pt_abs(null, null, 0, 0, -1); background:$redBrown;}
+    }
+    &-inner{
+        .intro-txt-box{
+            h1{@include b_txt();
+                &.between{@include dis-flex(center, space-between, null, null);}
+                span.arrow{@include conSize(10vw, 11vw, null); display:block; transform:rotate(90deg); background:url('https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63b4885fc632652071eb414b_arrow-red.svg') center no-repeat; background-size:8vw;}
+            }
+        }
+        .contents-box{@include dis-flex(null, null, null, null);
+            .left{@include conSize(15vw, null, null); margin:0 auto; padding:14vw 0 0 0;
+                .img-box{@include conSize(100%, 23.95vw, null); background:url('https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63bade93a09a604a2c5a11ba_whale-image.jpg') center no-repeat; background-size:cover;}
+                p{@include dis-flex(center, space-between, null, null); padding:0.5vw 0 0 0; @include s_txt();}
+            }
+            .right{@include conSize(48vw, 52.6vw, null); margin:0 auto; margin-right:0;
+                .img-box{@include conSize(100%, 100%, null); background:url('https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63badf7bb73c8bb61c10dab9_chimp-image.jpg') center no-repeat; background-size:cover;}
+            }
+        }
+    }
+}
+/*** 섹션07 끝 ***/
+
+/*** 섹션08 시작 ***/
+.section08{
+    &-inner{
+        .intro-txt-box{@include conSize(null, 100vh, null);
+            .counter-container{@include conSize(null, 100%, null); @include dis-flex(center, center, null, 6vw);
+                .counter{@include dis-flex(null, null, null, null);
+                    p{@include conSize(null, 3vw, null); @include dis-flex(null, null, column, null); overflow:hidden;
+                        span{@include font(2.5vw, 400, $mon, rgba(255,255,255, .1));
+                            &.basic{}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*** 섹션08 끝 ***/

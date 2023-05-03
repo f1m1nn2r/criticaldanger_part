@@ -11,9 +11,9 @@ $("html").easeScroll({
   accelerationDelta: 20,
   accelerationMax: 1,
   keyboardSupport: !0,
-  arrowScroll: 50
+  arrowScroll: 10
 });
-
+/*
 /////// criticaldanger.com ///////
 // expand-section
 var expandSection_bg = document.querySelector('.expand-section .img-wrap');
@@ -46,4 +46,4 @@ window.addEventListener('scroll', function(){
         circle.style.height = 90 + "px";
     }
 });
-
+*/
