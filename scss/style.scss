@@ -211,10 +211,15 @@ header{padding:11px 0 0 0;
                         &:first-child{text-align:right;}
                     }
                 }
-                .img-box{@include conSize(100%, 40.8vw, null); background:url('https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63aee29ada54a2d8c32b2731_jungle2.jpg') center no-repeat; background-size:cover;}
+                .sc05_imgView-bg{@include conSize(100%, 34vw, null); overflow:hidden;
+                    .img-box{@include conSize(100%, 120%, null); transform-style:preserve-3d; will-change:transform; background:url('https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63aee29ada54a2d8c32b2731_jungle2.jpg') center no-repeat; background-size:cover;}
+                }
+                
             }
             .right{@include dis-flex(null, null, column, 23vw);
-                .img-box{@include conSize(14.55vw, 21.55vw, null); margin:0 auto; margin-right:7vw; background:url('https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63aee29ab337a64c92f8e8c5_jungle1.jpg') center no-repeat; background-size:cover;}
+                .sc05_imgView-bg{@include conSize(14.55vw, 18vw, null); margin:0 auto; margin-right:7vw; overflow:hidden;
+                    .img-box{@include conSize(100%, 200%, null); transform-style:preserve-3d; will-change:transform; background:url('https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63aee29ab337a64c92f8e8c5_jungle1.jpg') center no-repeat; background-size:cover;}
+                }
                 .txt-box{text-transform:uppercase;
                     h2{line-height:1; @include font(3.5vw, 500, $mon, null);}
                 }
@@ -225,15 +230,15 @@ header{padding:11px 0 0 0;
 /*** 섹션05 끝 ***/
 
 /*** 섹션06 시작 ***/
-.section06{@include conSize(null, 50vw, null); position:relative;
-    .fix-txt{position:sticky; bottom:0; left:0; padding-left:10vw;
+.section06{@include conSize(null, 350vw, null); position:relative;
+    .fix-txt{padding-left:10vw;
         h1{line-height:0.85; white-space:nowrap; @include font(44vw, 300, $nanum, null); letter-spacing:-36px;}
     }
-    &-inner{@include pt_abs(null, null, 0, 0, null);
-        .card-frame{@include dis-flex(flex-end, null, null, null);
+    &-inner{@include conSize(null, 100%, null);
+        .card-frame{@include dis-flex(center, null, null, null); position:sticky; top:0;
             .empty_div{@include conSize(100vw, 100vh, null);}
             .card-container{display:-webkit-box; position:sticky; bottom:0;
-                .card-con-box{@include conSize(27.4vw, 43vw, null); @include dis-flex(flex-end, null, null, null);
+                .card-con-box{@include conSize(27.4vw, 43vw, null); @include dis-flex(center, null, null, null);
                     .card{@include conSize(84%, 85%, null); position:relative; z-index:5; backdrop-filter:blur(5px);
                         @for $i from 1 to 6{
                             &__#{$i}{background:url(./img/RL-scroll-#{$i}.png) center no-repeat; background-size:100%;}

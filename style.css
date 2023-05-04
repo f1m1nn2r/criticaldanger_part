@@ -576,9 +576,17 @@ header .header-inner .menu_ul {
 .section05-inner .contents-box .left .txt-box h2:first-child {
   text-align: right;
 }
-.section05-inner .contents-box .left .img-box {
+.section05-inner .contents-box .left .sc05_imgView-bg {
   width: 100%;
-  height: 40.8vw;
+  height: 34vw;
+  overflow: hidden;
+}
+.section05-inner .contents-box .left .sc05_imgView-bg .img-box {
+  width: 100%;
+  height: 120%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  will-change: transform;
   background: url("https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63aee29ada54a2d8c32b2731_jungle2.jpg") center no-repeat;
   background-size: cover;
 }
@@ -592,11 +600,19 @@ header .header-inner .menu_ul {
           flex-flow: column;
   gap: 23vw;
 }
-.section05-inner .contents-box .right .img-box {
+.section05-inner .contents-box .right .sc05_imgView-bg {
   width: 14.55vw;
-  height: 21.55vw;
+  height: 18vw;
   margin: 0 auto;
   margin-right: 7vw;
+  overflow: hidden;
+}
+.section05-inner .contents-box .right .sc05_imgView-bg .img-box {
+  width: 100%;
+  height: 200%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  will-change: transform;
   background: url("https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63aee29ab337a64c92f8e8c5_jungle1.jpg") center no-repeat;
   background-size: cover;
 }
@@ -613,13 +629,10 @@ header .header-inner .menu_ul {
 /*** 섹션05 끝 ***/
 /*** 섹션06 시작 ***/
 .section06 {
-  height: 50vw;
+  height: 350vw;
   position: relative;
 }
 .section06 .fix-txt {
-  position: sticky;
-  bottom: 0;
-  left: 0;
   padding-left: 10vw;
 }
 .section06 .fix-txt h1 {
@@ -631,17 +644,17 @@ header .header-inner .menu_ul {
   letter-spacing: -36px;
 }
 .section06-inner {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  height: 100%;
 }
 .section06-inner .card-frame {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: sticky;
+  top: 0;
 }
 .section06-inner .card-frame .empty_div {
   width: 100vw;
@@ -658,9 +671,9 @@ header .header-inner .menu_ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .section06-inner .card-frame .card-container .card-con-box .card {
   width: 84%;
