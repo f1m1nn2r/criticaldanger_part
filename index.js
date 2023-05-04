@@ -1,5 +1,5 @@
 
-
+// 스크롤 라이브러리
 $("html").easeScroll();
 $("html").easeScroll({
   frameRate: 60,
@@ -47,3 +47,36 @@ window.addEventListener('scroll', function(){
     }
 });
 */
+
+
+// 섹션01
+var section01 = document.querySelector('.section01');
+var cursor = document.querySelector('.sc01_cursor');
+window.addEventListener('mousemove', function(e){
+    var posX = e.clientX * 1.2 / section01.clientWidth;
+    var posY = e.clientY * 1.2 / section01.clientHeight;
+    cursor.style.transform = `translate3d(${posX}vw, ${posY}vh, 0) translateY(-50%)`
+});
+
+// 섹션04
+var section04 = document.querySelector('.section04');
+var section04_intro_txt = document.querySelectorAll('.section04-inner .txt-box h1');
+var tigerBg = document.querySelector('.tiger-bg');
+window.addEventListener('scroll', function(){
+    var RLScroll_value = window.scrollY / document.querySelector('.section04-inner').offsetHeight * 2;
+    for(var i=0; i<section04_intro_txt.length; i++){
+        if(window.scrollY >= section04.offsetTop / 2){
+            if(i % 2 == 0){
+                section04_intro_txt[i].style.transform = `translate3d(${-RLScroll_value}vw, 0, 0)`
+            }else if(i % 2 == 1){
+                section04_intro_txt[i].style.transform = `translate3d(${RLScroll_value}vw, 0, 0)`
+            }
+            tigerBg.style.transform = `translate3d(0, ${RLScroll_value * 2}vw, 0)`
+        }else{
+            section04_intro_txt[i].style.transform = `translate3d(0, 0, 0)`
+            tigerBg.style.transform = `translate3d(0, 0, 0)`
+        }
+    }
+
+    
+});

@@ -472,14 +472,15 @@ header .header-inner .menu_ul {
   height: 120vw;
   position: relative;
   z-index: 55;
+  overflow: hidden;
 }
 .section04-inner .txt-box {
-  padding: 1vw 2vw 1vw 2vw;
+  padding: 2vw 2vw 1vw 2vw;
 }
 .section04-inner .txt-box h1 {
   line-height: 0.9;
   font-size: 10vw;
-  font-weight: 400;
+  font-weight: 500;
   font-family: "Montserrat", sans-serif;
 }
 .section04-inner .txt-box h1:nth-child(2) {
@@ -498,13 +499,16 @@ header .header-inner .menu_ul {
 }
 .section04 .tiger-bg {
   width: 100%;
-  height: 100%;
+  height: 150vw;
   position: absolute;
-  top: 0;
+  top: -20%;
   left: 0;
   z-index: -1;
-  background: url("https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63a090cc5189956e035ef49a_sam-mN-_5ZQAt3M-unsplash%20(1).jpg") center no-repeat;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  background: url("https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63a090cc5189956e035ef49a_sam-mN-_5ZQAt3M-unsplash%20(1).jpg") no-repeat;
   background-size: cover;
+  background-position: top;
 }
 
 /*** 섹션04 끝 ***/
@@ -707,7 +711,7 @@ header .header-inner .menu_ul {
 .section07 {
   position: relative;
   z-index: 55;
-  padding: 47vw 0 0 0;
+  padding: 47vw 0 30vw 0;
 }
 .section07 .graph-bg {
   width: 100%;
@@ -746,7 +750,7 @@ header .header-inner .menu_ul {
 .section07-inner .intro-txt-box h1 {
   line-height: 0.9;
   font-size: 10vw;
-  font-weight: 400;
+  font-weight: 500;
   font-family: "Montserrat", sans-serif;
 }
 .section07-inner .intro-txt-box h1.between {
@@ -817,10 +821,19 @@ header .header-inner .menu_ul {
 /*** 섹션07 끝 ***/
 /*** 섹션08 시작 ***/
 .section08-inner .intro-txt-box {
-  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: sticky;
+  top: 3vw;
 }
 .section08-inner .intro-txt-box .counter-container {
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -854,4 +867,430 @@ header .header-inner .menu_ul {
   font-family: "Montserrat", sans-serif;
   color: rgba(255, 255, 255, 0.1);
 }
+.section08-inner .contents-box {
+  position: relative;
+  padding: 30vw 0 0 0;
+}
+.section08-inner .contents-box .checkCard-container {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  z-index: -1;
+}
+.section08-inner .contents-box .checkCard-container .checkCard-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.section08-inner .contents-box .checkCard-container .checkCard-wrap .checkCard-div {
+  width: 44.9vw;
+  height: 30.58vw;
+  position: relative;
+}
+.section08-inner .contents-box .checkCard-container .checkCard-wrap .checkCard-div .checkCard {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.section08-inner .contents-box .checkCard-container .checkCard-wrap .checkCard-div .checkCard.basic {
+  background: url(./img/checkCard-1.jpg) center no-repeat;
+  background-size: cover;
+}
+.section08-inner .contents-box .checkCard-container .checkCard-wrap .checkCard-div .checkCard__2 {
+  background: url(./img/checkCard-2.png) center no-repeat;
+  background-size: cover;
+}
+.section08-inner .contents-box .checkCard-container .checkCard-wrap .checkCard-div .checkCard__3 {
+  background: url(./img/checkCard-3.png) center no-repeat;
+  background-size: cover;
+}
+.section08-inner .contents-box .checkCard-container .checkCard-wrap .checkCard-div .checkCard__4 {
+  background: url(./img/checkCard-4.png) center no-repeat;
+  background-size: cover;
+}
+.section08-inner .contents-box .checkCard-container .checkCard-wrap .checkCard-div .checkCard__5 {
+  background: url(./img/checkCard-5.png) center no-repeat;
+  background-size: cover;
+}
+.section08-inner .contents-box .checkCard-container .checkCard-wrap .checkCard-div .checkCard__6 {
+  background: url(./img/checkCard-6.png) center no-repeat;
+  background-size: cover;
+}
+.section08-inner .contents-box .checkCard-txt-container {
+  padding: 30vw 0 0 0;
+}
+.section08-inner .contents-box .checkCard-txt-container .checkCard-txt {
+  width: 50vw;
+  height: 140vh;
+}
+.section08-inner .contents-box .checkCard-txt-container .checkCard-txt h1 {
+  line-height: 0.85;
+  font-size: 9vw;
+  font-weight: 300;
+  font-family: "Nanum Myeongjo", serif;
+  letter-spacing: -0.4vw;
+}
+.section08-inner .contents-box .checkCard-txt-container .checkCard-txt p {
+  margin: 1.5vw 0 0 0;
+  font-size: 0.7vw;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  color: #e4032e;
+  text-transform: uppercase;
+}
+.section08-inner .contents-box .checkCard-txt-container .checkCard-txt:nth-child(even) {
+  margin: 0 auto;
+  margin-right: 0;
+}
+
 /*** 섹션08 끝 ***/
+/*** 섹션09 시작 ***/
+.section09-inner .top-con {
+  padding: 0 1.3vw;
+}
+.section09-inner .top-con .txt-box h1 {
+  line-height: 0.9;
+  font-size: 10vw;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -0.6vw;
+}
+.section09-inner .top-con .txt-box h1 p {
+  line-height: 1;
+  font-size: 0.7vw;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  color: #e4032e;
+  letter-spacing: 0;
+}
+.section09-inner .top-con .txt-box h1:nth-child(2) {
+  text-align: right;
+}
+.section09-inner .top-con .txt-box .between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.section09-inner .top-con .txt-box div.between h1:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3vw;
+}
+.section09-inner .top-con .txt-box div.between h1:last-child p span {
+  display: block;
+}
+.section09-inner .top-con .txt-box div.between h1:last-child p > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.section09-inner .top-con .clothes-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.section09-inner .top-con .clothes-box .left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 51vw;
+  border: 1px solid #e4032e;
+}
+.section09-inner .top-con .clothes-box .left .clothes-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.section09-inner .top-con .clothes-box .left .clothes-container .clothes-inner {
+  position: relative;
+}
+.section09-inner .top-con .clothes-box .left .clothes-container .clothes-inner .deco {
+  width: 9vw;
+  height: 9vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  background: rgba(228, 3, 46, 0.1);
+  border-radius: 50%;
+}
+.section09-inner .top-con .clothes-box .left .clothes-container .clothes-inner .deco p {
+  font-size: 0.7vw;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  color: #e4032e;
+  text-align: center;
+}
+.section09-inner .top-con .clothes-box .left .clothes-container .clothes-inner span {
+  display: block;
+  margin: 3.56vw 0 0 0;
+  font-size: 0.7vw;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  color: #e4032e;
+  text-align: center;
+  text-transform: uppercase;
+}
+.section09-inner .top-con .clothes-box .left .clothes-container .clothes-inner .clothes {
+  width: 38vw;
+  height: 34vw;
+  margin: 0 auto;
+  background: url("https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63eaa5c08f97d4c93bb1efcd_fernandina-tee.png") center no-repeat;
+  background-size: cover;
+}
+.section09-inner .top-con .clothes-box .right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.section09-inner .top-con .clothes-box .right-inner {
+  width: 20vw;
+  margin: 0 auto;
+}
+.section09-inner .top-con .clothes-box .right-inner h2 {
+  position: relative;
+  font-size: 1.8vw;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+}
+.section09-inner .top-con .clothes-box .right-inner h2.between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.section09-inner .top-con .clothes-box .right-inner h2:last-child span.arrow {
+  width: 1.7vw;
+  height: 1.7vw;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url("https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63b4885fc632652071eb414b_arrow-red.svg") center no-repeat;
+  background-size: cover;
+  -webkit-transition: all 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.section09-inner .top-con .clothes-box .right-inner h2:last-child p {
+  -webkit-transform: translate3d(15%, 0, 0);
+          transform: translate3d(15%, 0, 0);
+  -webkit-transition: all 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.section09-inner .top-con .clothes-box .right-inner h2:last-child:hover span.arrow {
+  left: 92%;
+}
+.section09-inner .top-con .clothes-box .right-inner h2:last-child:hover p {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+.section09-inner .top-con .clothes-box .right-inner .clothes-container {
+  margin: 1.7vw 0 0 0;
+}
+.section09-inner .top-con .clothes-box .right-inner .clothes-container .clothes-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  padding: 3vw 0;
+  margin: 0 0 1.7vw 0;
+  border: 1px solid #e4032e;
+}
+.section09-inner .top-con .clothes-box .right-inner .clothes-container .clothes-inner .clothes {
+  width: 18vw;
+  height: 18vw;
+  background: url("https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63ea87e7a4dfba1e9a0ae9cc_somefolk-critical-aw.png") center no-repeat;
+  background-size: cover;
+}
+.section09-inner .top-con .clothes-box .right-inner .clothes-container .clothes-inner span {
+  display: block;
+  margin: 1.2vw 0 0 0;
+  font-size: 0.7vw;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  color: #e4032e;
+  text-align: center;
+  text-transform: uppercase;
+}
+.section09-inner .bot-con {
+  padding: 21vw 0 9vw;
+}
+.section09-inner .bot-con .fir {
+  text-align: center;
+}
+.section09-inner .bot-con .fir .everpress_div {
+  width: 3vw;
+  height: 3vw;
+  margin: 0 auto;
+  background: url("https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63bae3e3a09a60af755a632b_everpress-logo.svg") center no-repeat;
+  background-size: cover;
+}
+.section09-inner .bot-con .fir span {
+  display: block;
+  margin: 2.5vw 0 1vw;
+  font-size: 0.7vw;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  color: #e4032e;
+}
+.section09-inner .bot-con .fir .everpress_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1vw;
+}
+.section09-inner .bot-con .fir .everpress_link div a {
+  position: relative;
+  font-size: 0.7vw;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  color: #e4032e;
+}
+.section09-inner .bot-con .fir .everpress_link div a::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  background: #e4032e;
+}
+.section09-inner .bot-con .sec {
+  padding: 11vw 0 0 0;
+  text-align: center;
+}
+.section09-inner .bot-con .sec p {
+  padding: 0 0 5vw 0;
+  font-size: 2vw;
+  font-weight: 700;
+  font-family: "Nanum Myeongjo", serif;
+  letter-spacing: -0.06vw;
+}
+.section09-inner .bot-con .sec .support-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5.5vw;
+}
+.section09-inner .bot-con .sec .support-container .support-div_1 {
+  width: 3.5vw;
+  height: 5vw;
+  background: url("https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63b8b279a5f15fff51548c0a_wwf-logo.svg") center no-repeat;
+  background-size: cover;
+}
+.section09-inner .bot-con .sec .support-container .support-div_2 {
+  width: 9.7vw;
+  height: 4.2vw;
+  background: url("https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63baec681e37ba077769ea48_rewild-logo.svg") center no-repeat;
+  background-size: cover;
+}
+.section09-inner .bot-con .sec .support-container .support-div_3 {
+  width: 5vw;
+  height: 4.8vw;
+  background: url("https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63b8b27ae3ca2a2d12c44b87_iucn-logo.svg") center no-repeat;
+  background-size: cover;
+}
+
+/*** 섹션09 끝 ***/
+/*** 섹션01 시작 ***/
+.section10 .natural-bg {
+  width: 100%;
+  height: 85vw;
+  -webkit-filter: brightness(0.6);
+          filter: brightness(0.6);
+  background: url("https://uploads-ssl.webflow.com/63a063add1f95873e153afbb/63c988773a9951c0fa3d4e75_tree-logs-forest.jpg") center no-repeat;
+  background-size: cover;
+}
+.section10-inner .txt-box h1 {
+  line-height: 0.9;
+  font-size: 10vw;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+.section10-inner .txt-box h1.between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.section10-inner .txt-box h1:last-child {
+  padding-right: 14vw;
+  text-align: right;
+}
+
+/*** 섹션10 끝 ***/
