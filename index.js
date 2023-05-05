@@ -91,24 +91,22 @@ window.addEventListener('scroll', function(){
     }
 
     // 섹션06
-    
     var section06 = document.querySelector('.section06');
     var backFixText = document.querySelector('.RL-scroll-section .fix-txt');
     var cardContainer = document.querySelector('.card-container');
-    var sc06_scrollValue = window.scrollY * 2  / backFixText.offsetHeight;
+    var sc06_scrollValue = (window.scrollY * 4 / backFixText.offsetHeight) - 30;
     if(window.scrollY >= section06.getBoundingClientRect().top + window.pageYOffset){
-        backFixText.style.transform = 'translate3d(' + -(sc06_scrollValue * 2) + 'vw, 0, 0)';
+        backFixText.style.transform = 'translate3d(' + -(sc06_scrollValue) + 'vw, 0, 0)';
         cardContainer.style.transform = 'translate3d(' + -(sc06_scrollValue * 4) + 'vw, 0, 0)';
     }else{
         backFixText.style.transform = 'translate3d(0, 0, 0)';
         cardContainer.style.transform = 'translate3d(0, 0, 0)';
     }
     
-
     // 섹션07
     var section07 = document.querySelector('.section07');
     var section07_intro_txt = document.querySelectorAll('.section07 .intro-txt-box h1');
-    var sc07_RLScroll_value = (window.scrollY / document.querySelector('.section03').offsetHeight) * 1.5 - 25;
+    var sc07_RLScroll_value = (window.scrollY / document.querySelector('.section03').offsetHeight) * 1.5;
     for(var i=0; i<section07_intro_txt.length; i++){
         if(window.scrollY >= section07.offsetTop){
             if(i % 2 == 0){
